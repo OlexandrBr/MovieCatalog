@@ -1,0 +1,18 @@
+@model List<Movie>
+
+<h1>Каталог фільмів</h1>
+
+<div class="grid">
+    @foreach (var movie in Model)
+    {
+        <div class="card">
+            <img src="~/images/@movie.Image" alt="@movie.Title" />
+            <div class="info">
+                <h2>@movie.Title</h2>
+                <p class="genre">@movie.Genre</p>
+                <p>@movie.Description</p>
+                <p class="rating">★ @movie.Rating</p>
+            </div>
+        </div>
+    }
+</div>
